@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="left_rectangle"></div>
+    <div class="right_rectangle"></div>
+    <div class="top_dents"></div>
+    <div class="bottom_dents"></div>
+</div>
+<style>
+    body,
+    .left_rectangle:before,
+    .left_rectangle:after,
+    .right_rectangle:before,
+    .right_rectangle:after,
+    .top_dents,
+    .bottom_dents {
+        background: #62306D;
+    }
+
+    .container,
+    .left_rectangle,
+    .right_rectangle {
+        height: 100px;
+    }
+
+    .container {
+        display: flex;
+        position: relative;
+        width: 200px;
+        margin: 100px auto;
+    }
+
+    .left_rectangle {
+        background: #F7EC7D;
+        width: 140px;
+    }
+
+    .left_rectangle:before,
+    .left_rectangle:after,
+    .right_rectangle:before,
+    .right_rectangle:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+    }
+
+    .left_rectangle:before {
+        border-radius: 0 0 100px 0;
+    }
+
+    .left_rectangle:after {
+        bottom: 0;
+        border-radius: 0 100px 0 0;
+    }
+
+    .right_rectangle {
+        background: #E38F66;
+        width: 60px;
+    }
+
+    .right_rectangle:before {
+        right: 0;
+        border-radius: 0 0 0 100px;
+    }
+
+    .right_rectangle:after {
+        right: 0;
+        bottom: 0;
+        border-radius: 100px 0 0 0;
+    }
+
+    .top_dents,
+    .bottom_dents {
+        position: absolute;
+        right: 50px;
+        width: 20px;
+        height: 10px;
+    }
+
+    .top_dents {
+        border-radius: 0 0 100px 100px;
+    }
+
+    .bottom_dents {
+        bottom: 0;
+        border-radius: 100px 100px 0 0;
+    }
+</style>
